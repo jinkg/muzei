@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$rootProject.ext.toolsPluginVersion"
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    def Properties versionProps = new Properties()
+    versionProps.load(new FileInputStream(file('../version.properties')))
+
+    defaultConfig {
+        applicationId "com.yalin.muzei"
+        minSdkVersion 19
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        renderscriptTargetApi rootProject.ext.targetSdkVersion
+        renderscriptSupportModeEnabled true
+
+        versionCode versionProps['code'].toInteger()
+        versionName versionProps['name']
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile project(':android-client-common')
+}

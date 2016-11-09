@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+def Properties props = new Properties()
+props.load(new FileInputStream(file('../local.properties')))
+
+def android = [
+        sdk: props["sdk.dir"],
+        target: 'android-22'
+]
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+dependencies {
+    compile files("${android.sdk}/platforms/${android.target}/android.jar")
+}

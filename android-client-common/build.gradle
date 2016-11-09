@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$rootProject.ext.toolsPluginVersion"
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        renderscriptTargetApi rootProject.ext.targetSdkVersion
+        renderscriptSupportModeEnabled true
+    }
+}
+
+dependencies {
+    compile project(':api')
+}
