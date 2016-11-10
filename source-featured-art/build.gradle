@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    compile project(':api')
+    compile "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    compile "com.android.support:customtabs:$rootProject.ext.supportLibraryVersion"
+}
+
+android {
+    resourcePrefix 'featuredart_'
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}

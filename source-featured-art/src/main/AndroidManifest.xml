@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yalin.muzei.featuredart">
+
+    <application>
+        <service
+            android:name="com.yalin.muzei.featuredart.FeaturedArtSource"
+            android:description="@string/featuredart_source_description"
+            android:icon="@drawable/featuredart_ic_source"
+            android:label="@string/featuredart_source_title">
+
+            <intent-filter>
+                <action android:name="com.yalin.muzei.api.MuzeiArtSource" />
+            </intent-filter>
+            <meta-data
+                android:name="color"
+                android:value="@color/featuredart_color" />
+        </service>
+    </application>
+
+</manifest>

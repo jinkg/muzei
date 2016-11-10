@@ -1,17 +1,4 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath "com.android.tools.build:gradle:$rootProject.ext.toolsPluginVersion"
-    }
-}
-
 apply plugin: 'com.android.application'
-
-repositories {
-    jcenter()
-}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
