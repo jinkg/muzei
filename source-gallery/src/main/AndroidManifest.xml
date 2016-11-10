@@ -3,7 +3,39 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application>
+        <provider
+            android:name=".gallery.GalleryProvider"
+            android:authorities="${galleryAuthority}"
+            android:exported="false"
+            android:grantUriPermissions="true" />
 
+        <service
+            android:name="com.yalin.muzei.gallery.GalleryArtSource"
+            android:description="@string/gallery_description"
+            android:icon="@drawable/gallery_ic_source"
+            android:label="@string/gallery_title">
+            <intent-filter>
+                <action android:name="com.yalin.muzei.api.MuzeiArtSource" />
+            </intent-filter>
+
+            <meta-data
+                android:name="settingsActivity"
+                android:value="com.yalin.muzei.gallery.GallerySettingsActivity" />
+            <meta-data
+                android:name="setupActivity"
+                android:value="com.yalin.muzei.gallery.GallerySetupActivity" />
+        </service>
+
+        <activity
+            android:name=".gallery.GallerySetupActivity"
+            android:exported="true"
+            android:label="@string/gallery_title"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".gallery.GallerySettingsActivity"
+            android:label="@string/gallery_title"
+            android:theme="@style/Theme.Gallery" />
     </application>
 
 </manifest>

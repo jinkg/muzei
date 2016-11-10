@@ -16,6 +16,8 @@ android {
 
         versionCode versionProps['code'].toInteger()
         versionName versionProps['name']
+
+        buildConfigField "String", "DEVICE_TYPE", "\"android\""
     }
     buildTypes {
         release {
@@ -26,6 +28,16 @@ android {
 }
 
 dependencies {
+    compile "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    compile "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+    compile "com.google.firebase:firebase-crash:$rootProject.ext.googlePlayServicesVersion"
+    compile "org.greenrobot:eventbus:3.0.0"
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:customtabs:$rootProject.ext.supportLibraryVersion"
+
     compile project(':android-client-common')
+    compile project(':source-featured-art')
+    compile project(':source-gallery')
 }
