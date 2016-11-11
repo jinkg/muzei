@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/animated_logo_fragment"
-        android:name="com.api.muzei.util.AnimatedMuzeiLogoFragment"
+        android:name="com.yalin.muzei.util.AnimatedMuzeiLogoFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />

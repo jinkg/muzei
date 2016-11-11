@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.api.muzei.util.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.yalin.muzei.util.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.api.muzei.util.PanScaleProxyView
+    <com.yalin.muzei.util.PanScaleProxyView
         android:id="@+id/pan_scale_proxy"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -20,7 +20,7 @@
         android:clickable="true"
         android:visibility="gone">
 
-        <com.api.muzei.util.AnimatedMuzeiLoadingSpinnerView
+        <com.yalin.muzei.util.AnimatedMuzeiLoadingSpinnerView
             android:id="@+id/image_loading_indicator"
             android:layout_width="132dp"
             android:layout_height="88dp"
@@ -175,4 +175,4 @@
     <include layout="@layout/muzei_include_intro" />
 
 
-</com.api.muzei.util.DrawInsetsFrameLayout>
+</com.yalin.muzei.util.DrawInsetsFrameLayout>

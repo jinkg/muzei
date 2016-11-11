@@ -1,11 +1,42 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="Theme.MuzeiActivity" parent="Theme.Muzei.Wallpaper">
+        <!-- on Samsung devices, window animations between windows showing
+             the wallpaper seem to be broken, so don't use them. -->
+        <!--<item name="android:windowAnimationStyle">@style/WindowAnimation.MuzeiActivity</item>-->
     </style>
+
+    <style name="Theme.Muzei.Wallpaper" parent="Theme.Muzei">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="Theme.Muzei" parent="Theme.Muzei.Base"> <!-- pre-Lollipop -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.Muzei.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:actionModeBackground">@drawable/cab_background</item>-->
+        <!--<item name="android:actionModeStyle">@style/Widget.Muzei.ActionMode</item>-->
+        <!--<item name="android:actionOverflowButtonStyle">@style/Widget.Muzei.ActionButton.Overflow</item>-->
+        <item name="android:selectableItemBackground">@drawable/white_selectable_item_background
+        </item>
+        <item name="android:seekBarStyle">@style/Widget.Muzei.SeekBar</item>
+        <item name="android:spinnerStyle">@style/Widget.Muzei.Spinner</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.Muzei.ListView.DropDown</item>
+        <item name="android:popupMenuStyle">@style/Widget.Muzei.PopupMenu</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.Muzei.PopupMenu.Overflow</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Muzei.Medium</item>
+        <item name="android:textAppearanceLargePopupMenu">
+            @style/TextAppearance.Muzei.LargePopupMenu
+        </item>
+
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorAccent">@color/theme_accent</item>
+    </style>
+
 
 </resources>
