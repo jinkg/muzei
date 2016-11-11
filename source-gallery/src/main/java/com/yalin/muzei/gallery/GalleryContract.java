@@ -3,7 +3,7 @@ package com.yalin.muzei.gallery;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.yalin.muzei.BuildConfig;
+import com.yalin.muzei.gallery.BuildConfig;
 
 /**
  * YaLin

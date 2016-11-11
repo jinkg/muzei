@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yalin.muzei">
+    package="com.yalin.muzei.androidclientcommon">
 
     <permission
         android:name="com.yalin.muzei.WRITE_PROVIDER"
@@ -8,7 +8,7 @@
 
     <application>
         <provider
-            android:name=".provider.MuzeiProvider"
+            android:name="com.yalin.muzei.provider.MuzeiProvider"
             android:authorities="com.yalin.muzei"
             android:exported="true"
             android:writePermission="com.yalin.muzei.WRITE_PROVIDER" />

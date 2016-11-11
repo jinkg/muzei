@@ -6,4 +6,19 @@ package com.api.muzei.event;
  */
 
 public class ArtworkLoadingStateChangedEvent {
+    private boolean mLoading;
+    private boolean mError;
+
+    public ArtworkLoadingStateChangedEvent(boolean loading, boolean error) {
+        mLoading = loading;
+        mError = error;
+    }
+
+    public boolean isLoading() {
+        return mLoading;
+    }
+
+    public boolean hadError() {
+        return mError;
+    }
 }

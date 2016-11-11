@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.api.muzei.R;
+import com.yalin.muzei.R;
 
 /**
  * YaLin

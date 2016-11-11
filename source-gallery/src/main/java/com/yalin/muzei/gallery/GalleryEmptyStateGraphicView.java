@@ -12,8 +12,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.yalin.muzei.R;
-
 import java.util.Random;
 
 /**

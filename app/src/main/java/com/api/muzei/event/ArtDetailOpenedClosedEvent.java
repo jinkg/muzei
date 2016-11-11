@@ -6,4 +6,13 @@ package com.api.muzei.event;
  */
 
 public class ArtDetailOpenedClosedEvent {
+    boolean mOpened;
+
+    public ArtDetailOpenedClosedEvent(boolean opened) {
+        mOpened = opened;
+    }
+
+    public boolean isArtDetailOpened() {
+        return mOpened;
+    }
 }

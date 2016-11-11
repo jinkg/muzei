@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yalin.muzei">
+    package="com.yalin.muzei.gallery">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application>
         <provider
-            android:name=".gallery.GalleryProvider"
+            android:name=".GalleryProvider"
             android:authorities="${galleryAuthority}"
             android:exported="false"
             android:grantUriPermissions="true" />
@@ -27,13 +27,13 @@
         </service>
 
         <activity
-            android:name=".gallery.GallerySetupActivity"
+            android:name=".GallerySetupActivity"
             android:exported="true"
             android:label="@string/gallery_title"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
-            android:name=".gallery.GallerySettingsActivity"
+            android:name=".GallerySettingsActivity"
             android:label="@string/gallery_title"
             android:theme="@style/Theme.Gallery" />
     </application>

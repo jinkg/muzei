@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.yalin.muzei.R;
+import com.yalin.muzei.androidclientcommon.R;
 
 /**
  * YaLin

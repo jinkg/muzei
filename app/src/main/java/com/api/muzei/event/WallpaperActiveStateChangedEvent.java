@@ -6,4 +6,13 @@ package com.api.muzei.event;
  */
 
 public class WallpaperActiveStateChangedEvent {
+    private boolean mActive;
+
+    public WallpaperActiveStateChangedEvent(boolean active) {
+        mActive = active;
+    }
+
+    public boolean isActive() {
+        return mActive;
+    }
 }

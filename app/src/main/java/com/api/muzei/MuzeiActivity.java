@@ -46,6 +46,7 @@ import com.api.muzei.event.ArtworkSizeChangedEvent;
 import com.api.muzei.event.SwitchingPhotosStateChangedEvent;
 import com.api.muzei.event.WallpaperActiveStateChangedEvent;
 import com.api.muzei.event.WallpaperSizeChangedEvent;
+import com.api.muzei.render.MuzeiRendererFragment;
 import com.api.muzei.settings.SettingsActivity;
 import com.api.muzei.sync.TaskQueueService;
 import com.api.muzei.util.AnimatedMuzeiLoadingSpinnerView;
@@ -55,7 +56,10 @@ import com.api.muzei.util.DrawInsetsFrameLayout;
 import com.api.muzei.util.PanScaleProxyView;
 import com.api.muzei.util.ScrimUtil;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.yalin.muzei.BuildConfig;
+import com.yalin.muzei.R;
 import com.yalin.muzei.api.Artwork;
+import com.yalin.muzei.api.MuzeiArtSource;
 import com.yalin.muzei.api.MuzeiContract;
 import com.yalin.muzei.api.UserCommand;
 import com.yalin.muzei.util.TypefaceUtil;
@@ -482,7 +486,7 @@ public class MuzeiActivity extends AppCompatActivity {
                     ObjectAnimator.ofFloat(affordanceView, View.ALPHA, 1f),
                     ObjectAnimator.ofFloat(iconTextView, View.ALPHA, 1f),
                     a1, a2, a3, a4);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (Build.VERSION.SDK_INT >= 21) {
                 set.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {

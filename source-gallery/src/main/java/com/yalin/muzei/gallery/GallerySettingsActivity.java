@@ -64,7 +64,6 @@ import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 import com.squareup.picasso.Picasso;
-import com.yalin.muzei.R;
 import com.yalin.muzei.util.MultiSelectionController;
 
 import java.util.ArrayList;

@@ -30,7 +30,6 @@ import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import com.yalin.muzei.R;
 import com.yalin.muzei.api.Artwork;
 import com.yalin.muzei.api.MuzeiArtSource;
 

@@ -6,4 +6,7 @@ package com.api.muzei.settings;
  */
 
 public interface Prefs {
+    String PREF_GREY_AMOUNT = "grey_amount";
+    String PREF_DIM_AMOUNT = "dim_amount";
+    String PREF_BLUR_AMOUNT = "blur_amount";
 }
