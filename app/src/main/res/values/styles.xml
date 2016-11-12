@@ -38,5 +38,38 @@
         <item name="colorAccent">@color/theme_accent</item>
     </style>
 
+    <style name="Widget.Muzei.SeekBar" parent="android:Widget.Holo.SeekBar">
+        <item name="android:progressDrawable">@drawable/scrubber_progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@drawable/scrubber_progress_horizontal</item>
+        <item name="android:thumb">@drawable/scrubber_control_selector</item>
+    </style>
+
+    <style name="Widget.Muzei.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
+    <!-- https://code.google.com/p/android/issues/detail?id=24922 -->
+    <style name="Widget.Muzei.ListView.DropDown" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+        <item name="android:listSelector">?selectableItemBackground</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+    <style name="TextAppearance.Muzei.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="TextAppearance.Muzei.LargePopupMenu" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">#eee</item>
+    </style>
+
+    <style name="Widget.Muzei.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
+    <style name="Widget.Muzei.PopupMenu.Overflow" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
 
 </resources>

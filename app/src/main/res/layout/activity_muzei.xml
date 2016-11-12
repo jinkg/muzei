@@ -134,7 +134,7 @@
                     app:shadowDy="1dp"
                     app:shadowRadius="3dp" />
 
-                <com.google.android.apps.muzei.util.ShadowDipsTextView
+                <com.yalin.muzei.util.ShadowDipsTextView
                     android:id="@+id/byline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

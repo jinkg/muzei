@@ -17,9 +17,9 @@ import android.provider.BaseColumns;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.yalin.muzei.api.Artwork;
 import com.yalin.muzei.sync.TaskQueueService;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.yalin.muzei.api.Artwork;
 import com.yalin.muzei.api.MuzeiArtSource;
 import com.yalin.muzei.api.MuzeiContract;
 import com.yalin.muzei.api.UserCommand;

@@ -158,7 +158,7 @@ public class MuzeiContract {
          * opening an {@link java.io.InputStream InputStream} to the current artwork's image.
          */
         public static final Uri CONTENT_URI = Uri.parse(MuzeiContract.SCHEME + MuzeiContract.AUTHORITY
-                + "/" + Artwork.TABLE_NAME);
+                + "/" + MuzeiContract.Artwork.TABLE_NAME);
         /**
          * Intent action that will be broadcast when the artwork is changed. This happens immediately after the
          * ContentProvider is updated with data and should be considered the signal that you can retrieve the new

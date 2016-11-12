@@ -40,6 +40,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.yalin.muzei.api.Artwork;
 import com.yalin.muzei.event.ArtDetailOpenedClosedEvent;
 import com.yalin.muzei.event.ArtworkLoadingStateChangedEvent;
 import com.yalin.muzei.event.ArtworkSizeChangedEvent;
@@ -56,7 +57,6 @@ import com.yalin.muzei.util.DrawInsetsFrameLayout;
 import com.yalin.muzei.util.PanScaleProxyView;
 import com.yalin.muzei.util.ScrimUtil;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.yalin.muzei.api.Artwork;
 import com.yalin.muzei.api.MuzeiArtSource;
 import com.yalin.muzei.api.MuzeiContract;
 import com.yalin.muzei.api.UserCommand;
