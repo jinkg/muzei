@@ -48,7 +48,10 @@ public class ImageBlurrer {
         if (mAllocationDest == null) {
             mAllocationDest = Allocation.createFromBitmap(mRS, dest);
         } else {
-            mAllocationDest.copyFrom(dest);
+            mAllocationDest.destroy();
+            mAllocationDest = Allocation.createFromBitmap(mRS, dest);
+            // fix some bug
+//            mAllocationDest.copyFrom(dest);
         }
 
         if (radius > 0f && desaturateAmount > 0f) {

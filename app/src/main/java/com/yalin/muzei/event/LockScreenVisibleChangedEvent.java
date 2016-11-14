@@ -6,4 +6,13 @@ package com.yalin.muzei.event;
  */
 
 public class LockScreenVisibleChangedEvent {
+    public boolean mLockScreenVisible = false;
+
+    public LockScreenVisibleChangedEvent(boolean lockScreenVisible) {
+        mLockScreenVisible = lockScreenVisible;
+    }
+
+    public boolean isLockScreenVisible() {
+        return mLockScreenVisible;
+    }
 }
