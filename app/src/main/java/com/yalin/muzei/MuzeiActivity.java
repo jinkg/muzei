@@ -73,7 +73,6 @@ public class MuzeiActivity extends AppCompatActivity {
     private static final String PREF_SEEN_TUTORIAL = "seen_tutorial";
 
     // Controller/logic fields
-    private SourceManager mSourceManager;
     private int mCurrentViewportId = 0;
     private float mWallpaperAspectRatio;
     private float mArtworkAspectRatio;
@@ -262,8 +261,6 @@ public class MuzeiActivity extends AppCompatActivity {
         });
 
         showHideChrome(true);
-
-        mSourceManager = SourceManager.getInstance(this);
 
         EventBus.getDefault().register(this);
 
@@ -604,7 +601,7 @@ public class MuzeiActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mSourceManager.sendAction(MuzeiArtSource.BUILTIN_COMMAND_ID_NEXT_ARTWORK);
+                SourceManager.sendAction(MuzeiActivity.this, MuzeiArtSource.BUILTIN_COMMAND_ID_NEXT_ARTWORK);
                 mNextFakeLoading = true;
                 showNextFakeLoading();
             }
@@ -676,7 +673,7 @@ public class MuzeiActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem menuItem) {
                 int id = mOverflowSourceActionMap.get(menuItem.getItemId());
                 if (id > 0) {
-                    mSourceManager.sendAction(id);
+                    SourceManager.sendAction(MuzeiActivity.this, id);
                     return true;
                 }
 
