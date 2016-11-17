@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:author="@string/gallery_title"
+    android:description="@string/app_description"
+    android:settingsActivity="com.yalin.muzei.settings.SettingsActivity"
+    android:thumbnail="@drawable/thumb" />

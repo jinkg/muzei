@@ -37,6 +37,8 @@ dependencies {
     compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:customtabs:$rootProject.ext.supportLibraryVersion"
 
+    compile 'com.facebook.stetho:stetho:1.4.1'
+
     compile project(':android-client-common')
     compile project(':source-featured-art')
     compile project(':source-gallery')
